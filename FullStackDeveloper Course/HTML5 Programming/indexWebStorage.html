@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Storage</title>
+</head>
+<body>
+
+	<div id="name">
+		
+	</div>
+	<script>
+		/*
+		
+		LOCAL STORAGE EXAMPLE
+
+		if(typeof(Storage) !== "undefined")
+		{
+		//store an item
+			localStorage.setItem('name', 'Tony');
+
+			//Get Item
+			console.log(localStorage.getItem('name'));
+
+						//remove item
+			localStorage.removeItem('name');
+
+
+			//normal if-else conditional - checking to see if a name exists
+			if(localStorage.name)
+			{
+				//send to Web Page
+				document.getElementById('name').innerHTML = localStorage.name;
+			}
+			else
+			{
+				//print alternate logic to web page
+				document.getElementById('name').innerHTML = 'No Name Found';
+			}
+
+
+		}
+		//if localStorage is not available with the users browser, send a console log letting them know
+		else
+		{
+			console.log("localStorage Not Available");
+		}
+		*/
+
+		// SESSION STORAGE EXAMPLE - ONLY DIFFERENCNE IS CHANGING localStorage TO sessionStorage
+		if(typeof(Storage) !== "undefined")
+		{
+		//store an item
+			sessionStorage.setItem('name', 'Bayley');
+
+			//Get Item
+			console.log(sessionStorage.getItem('name'));
+
+						//remove item
+			sessionStorage.removeItem('name');
+
+
+			//normal if-else conditional - checking to see if a name exists
+			if(sessionStorage.name)
+			{
+				//send to Web Page
+				document.getElementById('name').innerHTML = sessionStorage.name;
+			}
+			else
+			{
+				//print alternate logic to web page
+				document.getElementById('name').innerHTML = 'No Name Found';
+			}
+
+
+		}
+		//if sessionStorage is not available with the users browser, send a console log letting them know
+		else
+		{
+			console.log("sessionStorage Not Available");
+		}
+		
+
+	</script>
+</body>
+</html>

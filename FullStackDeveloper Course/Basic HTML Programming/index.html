@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>My First Webpage</title>
+	</head>
+	<body>
+		<h1>Headings</h1>
+		<h1>Welcome (h1)</h1>
+		<h2>Welcome (h2)</h2>
+		<h3>Welcome (h3)</h3>
+		<h4>Welcome (h4)</h4>
+		<h5>Welcome (h5)</h5>
+		<h6>Welcome (h6)</h6>
+
+		<br>
+		<h1>Paragraphs</h1>
+		<p>This is a paragraph</p>
+		<p>This is another <strong>paragraph</strong> of <i>text</i></p>
+
+		<br>
+
+		<h1>Links</h1>
+		<a title="fuck me daddy" href="http://google.com" target="_blank">Link To Google</a>
+
+		<br>
+		<h1>Images</h1>
+		<img src="http://lorempixel.com/400/200">
+
+		<br>
+		<h1>Unordered Lists</h1>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+		</ul>
+
+		<br>
+		<h1>Ordered Lists</h1>
+		<ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+		</ol>
+
+		<br>
+		<h1>Description Lists</h1>
+		<dl>
+			<dt>Coffee</dt>
+			<dd>Black Hot Drink</dd>
+			<dt>Milk</dt>
+			<dd>White cold Drink</dd>
+		</dl>
+
+		<h1>Tables</h1>
+		<table>
+			<thead>
+				<tr align="left" bgcolor="cyan">
+					<th width="400">Name</th>
+					<th width="300">Email</th>
+					<th width="300">Phone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John Doe</td>
+					<td>jdoe@gmail.com</td>
+					<td>555-555-5555</td>
+				</tr>
+
+				<tr>
+					<td>Bayley Makloski</td>
+					<td>bmakloski@outlook.com</td>
+					<td>970-430-1795</td>
+				</tr>
+
+				<tr>
+					<td>Mass Hole</td>
+					<td>BostonAccent87@yahoo.com</td>
+					<td>555-555-5555</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+		<br>
+		<br>
+
+		<h1>Registration</h1>
+		<form action="POST" action="index.php">
+			<fieldset>
+
+				<legend>Account</legend>
+				<label>Name</label><br>
+				<input type="text" name="name" required> <br><br>
+
+				<label>Email</label><br>
+				<input type="email" name="email"> <br><br>
+
+				<label>Password</label><br>
+				<input type="Password" name="password"> <br><br>
+
+			</fieldset>
+			<br>
+			<br>
+
+			<fieldset>	
+
+				<legend>User Info</legend>
+				<label>Location</label><br>
+				<select name="Location">
+					<option value="BOS">Boston</option>
+					<option value="NY" selected>New York</option>
+					<option value="SEA">Seattle</option>
+				</select> <br> <br>
+
+				<label>Gender</label><br>
+				<input type="Radio" name="gender" value="male" required> Male
+				<input type="radio" name="gender" value="female" required> Female <br><br>
+				
+				<label>Interests</label><br>
+				<input type="checkbox" name="interests" value="Movies"> Movies
+				<input type="checkbox" name="interests" value="Music"> Music
+				<input type="checkbox" name="interests" value="Sports" checked> Sports
+				<input type="checkbox" name="interests" value="Art"> Art <br><br>
+
+			</fieldset>
+
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

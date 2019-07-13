@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<style>
+		#mycanvas{
+			border: 1px #000 solid;
+			background: #f4f4f4;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="mycanvas" width="300" height="300">	</canvas>
+	<script>
+		var c = document.getElementById('mycanvas');
+		var context = c.getContext('2d');
+		
+/*
+		//rectangle
+		context.fillStyle='red';
+		context.fillRect(25,10,250,30);
+*/
+/*
+		//line
+		context.moveTo(0,0);
+		context.lineTo(250,150);
+		context.stroke();
+*/
+/*
+		//circle
+		context.beginPath();
+		context.arc(150,150,60,0,2*Math.PI);
+		context.fillStyle='green';
+		context.fill();
+		context.lineWidth = 4;
+		context.strokeStyle='red';
+		context.stroke();
+*/
+/*
+		//text
+		context.font = '50px Times New Roman';
+		context.strokeStyle='red';
+		context.strokeText('Hello World',20,150);
+*/
+		//gradient in a rectangle
+		var grd = context.createLinearGradient(0,0,100,0);
+		grd.addColorStop(0,'blue');
+		grd.addColorStop(1,'cyan');
+		context.fillStyle = grd;
+		context.fillRect(0,0,300,300);
+		
+	</script>
+
+
+
+</body>
+</html>
