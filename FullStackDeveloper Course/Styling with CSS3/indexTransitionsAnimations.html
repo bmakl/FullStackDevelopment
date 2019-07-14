@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transitions & Animations</title>
+	<style>
+		#box1{
+			width: 100px;
+			height: 100px;
+			background: #000;
+
+			/*anytime we move our width it should take a 2 second transition
+			we can also add other elements and things that we want to be transitioned by separating with a comma*/
+			transition: width 2s , height 4s;
+
+			/*if we want to wait for a duration before anything happens we can use transition-delay, in this case we know we want to change our width, but we dont want it to happen right away, SO we can use transition delay where the user will have to leave their mouse on the object for a second before our transition happens. It will also take a second to get smaller*/
+			transition-delay: 1s;
+
+			/*This specifies how the actual transition looks, the other functions just tell us that the transition is happening and how it is supposed to happen i.e. it takes a second before it starts and the whole thing should last two seconds. The timing function can do things like make the bar start out growing really fast, then slow down as it gets closer to being done or vice versa*/
+			transition-timing-function: ease-out;
+
+		}
+
+		/*whenever we hover over box1*/
+		#box1:hover{
+
+			/*Make sure in your transitions your altering the correct properties*/
+			width: 300px;
+			height: 400px;
+		}
+
+		#box2{
+			width: 100px;
+			height: 100px;
+			background: red;
+
+			/*allows us to use top left right etc. in our colorChange animation*/
+			position: relative;
+
+			/*start by creating the name for your animation, it can be called whatever you like*/
+			animation-name: colorChange;
+
+			/*Also specify a duration for the animation to take*/
+			animation-duration: 5s;
+
+			/*If we want our animation to run a certain number of times - this case 3 times - if we want it to keep going forever we can use the keyword 'infinte'*/
+			animation-iteration-count: 3;
+
+			/*use this to quickly reverse the animation*/
+			animation-direction: reverse;
+		}
+
+		/*	SIMPLE colorChange IMPLEMENTATION
+			simply write '@keyframes' and then the name of the function you declared. You can use the 'from' and 'to' form to just basic and simply functionality with no extra steps this function simply changes the color from red to blue over the course of our specified duration.
+		 */
+
+		@keyframes colorChange1{
+			from{background: red;}
+			to{background: blue;}
+		}
+		*/
+
+		/*Little bit more advanced implementation of colorChange animation, we know our duration of this animation is 5 seconds. So at the start or 0% completion mark: the color should be red and we should have a relative position of 0 pixels from the left and 0 pixles from the top. At each stage of the animation (25%, 50%, etc.) we specify different things that should happen*/
+		@keyframes colorChange{
+			0%{background: red; left: 0px; top: 0px;}
+			25%{background: yellow;left: 200px; top: 0px;}
+			50%{background: green;left: 200px; top: 200px;}
+			75%{background: blue;left: 0px; top: 200px;}
+			100%{background: red;left: 0px; top: 0px;}
+		}
+	</style>
+</head>
+<body>
+
+	<div id="box1"></div>
+
+	<div id="box2"></div>
+
+</body>
+</html>
