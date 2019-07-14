@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shadows</title>
+	<style>
+
+			/* first number is position of horizontal shadow
+				second number is position of vertical shadow
+				third number lets us blur it - looks nicer 
+				putting a color in gives us the color of the shadow*/
+		h1.text1{
+			text-shadow: 2px 2px 5px red;
+		}
+
+		h1.text2{
+			color: #ffffff;
+			text-shadow: 2px 2px 5px black;
+		}
+
+			/* in this example, we are using two different shadows to make a really cool effect on the third heading - done by breaking up styles with a comma*/
+		h1.text3{
+			text-shadow: 0 0 3px #f00, 0 0 5px #00f;
+		}
+
+		#box1{
+			width: 300px;
+			height: 200px;
+			padding:15px;
+			background-color: red;
+			/*first number is horizontal shadow
+			  second number is vertical shadow
+			  third number is the blur */
+			box-shadow: 10px 10px 15px grey;
+		}
+
+		.card{
+			width:250px;
+			box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+			 0px 6px 20px 0 rgba(0,0,0,0.19);
+			 text-align: center;
+		}
+
+		.card-header{
+			background: #f00;
+			color: #fff;
+			padding: 10px;
+			font-size: 40px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+
+	<h1 class="text1">Hello World</h1>
+	<h1 class="text2">Hello World</h1>
+	<h1 class="text3">Hello World</h1>
+
+	<div id="box1"></div>
+	<br>
+	<div class="card">
+		<div class="card-header">
+			<h1>1</h1>
+		</div>
+		<div class="card-container">
+			<p>This is a card.</p>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colors, Backgrounds & Gradients</title>
+
+	<style>
+		#rounded1{
+			background: rgba(255,0,0,0.3);
+			text-align: center;
+			color: white;
+			width: 200px;
+			height: 200px;
+			padding:30px;
+			border-radius: 10px;
+		}
+
+		#rounded2{
+			background: hsl(120,100%,75%);
+			text-align: center;
+			color: white;
+			width: 200px;
+			height: 200px;
+			padding:30px;
+			border-top-left-radius: 25px;
+			border-bottom-right-radius: 25px;
+		}
+
+		#rounded3{
+			background: hsla(120,100%,50%,0.3);
+			text-align: center;
+			color: white;
+			width: 200px;
+			height: 200px;
+			padding:30px;
+			border: 3px black solid;
+			border-radius: 50%
+		}
+
+		img{
+			border-radius: 10px;
+		}
+
+		#border-img{
+			border: 10px solid transparent;
+			padding:15px;
+			border-image: url(border.png) 30 round;
+		}
+
+		#my-bg{
+			background-image: url(img_flwr.gif), url(paper.gif);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+			padding: 15px 200px 15px 15px;
+			background-size: 100px 100px;
+		}
+
+		#grad1{
+			width: 500px;
+			height: 200px;
+			background: blue;
+			background: linear-gradient(blue,grey,teal);
+		}
+
+		#grad2{
+			width: 500px;
+			height: 200px;
+			background: blue;
+			background: linear-gradient(to right, blue,grey,teal);
+		}
+		#grad3{
+			width: 500px;
+			height: 200px;
+			background: blue;
+			background: linear-gradient(to bottom right, blue,grey,teal);
+		}
+
+		#grad4{
+			width: 500px;
+			height: 200px;
+			background: blue;
+			background: radial-gradient(blue 65%,grey 20%);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="rounded1">Rounded Corners</div>
+	<br>
+	<div id="rounded2">Rounded Corners</div>
+	<br>
+	<div id="rounded3">Rounded Corners</div>
+	<br>
+
+	<img src="bird.jpg">
+	<br>
+	<div id="border-img">This Div uses an img border</div>
+	<br>
+	<div id="my-bg">
+		<h1>Welcome</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin rutrum enim, eget gravida eros pretium eget. Aliquam porttitor magna quis malesuada sagittis. Phasellus facilisis lacus risus, non condimentum leo viverra cursus. Proin porta ante quis mi dapibus, rhoncus ullamcorper sem condimentum. Pellentesque interdum odio magna, dignissim sagittis ipsum vestibulum eget. Suspendisse erat ex, imperdiet vel auctor vitae, feugiat nec ipsum. Suspendisse finibus id ex at malesuada. Mauris ultricies nunc ut tellus aliquam vestibulum. Fusce efficitur lorem ut velit luctus, et auctor tellus volutpat. Pellentesque eu dignissim mi. Integer condimentum cursus tortor, vel aliquet risus congue in. Nulla ultrices neque lacus, nec commodo ex tincidunt nec. Mauris vestibulum, sem vitae sodales fringilla, turpis sapien cursus augue, sit amet facilisis augue nisl sit amet nibh. Morbi viverra consectetur nunc, sit amet pretium ipsum condimentum in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pretium ipsum eleifend nisi sagittis rhoncus. Aenean mollis ut neque a pharetra. Integer euismod nulla at turpis tincidunt, a aliquam nibh volutpat.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin rutrum enim, eget gravida eros pretium eget. Aliquam porttitor magna quis malesuada sagittis. Phasellus facilisis lacus risus, non condimentum leo viverra cursus. Proin porta ante quis mi dapibus, rhoncus ullamcorper sem condimentum. Pellentesque interdum odio magna, dignissim sagittis ipsum vestibulum eget. Suspendisse erat ex, imperdiet vel auctor vitae, feugiat nec ipsum. Suspendisse finibus id ex at malesuada. Mauris ultricies nunc ut tellus aliquam vestibulum. Fusce efficitur lorem ut velit luctus, et auctor tellus volutpat. Pellentesque eu dignissim mi. Integer condimentum cursus tortor, vel aliquet risus congue in. Nulla ultrices neque lacus, nec commodo ex tincidunt nec. Mauris vestibulum, sem vitae sodales fringilla, turpis sapien cursus augue, sit amet facilisis augue nisl sit amet nibh. Morbi viverra consectetur nunc, sit amet pretium ipsum condimentum in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pretium ipsum eleifend nisi sagittis rhoncus. Aenean mollis ut neque a pharetra. Integer euismod nulla at turpis tincidunt, a aliquam nibh volutpat.</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="grad1"></div><br>
+	<div id="grad2"></div><br>
+	<div id="grad3"></div><br>
+	<div id="grad4"></div><br>
+</body>
+</html>
