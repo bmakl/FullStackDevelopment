@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Styling</title>
+
+	<style>
+		
+		body{
+			font-family: Arial,sans-serif;
+			font-size: 13px;
+		}
+
+		h1{
+			color: red;
+			/*visibility: hidden;*/
+			/*display: none;*/
+			display: inline;
+		}
+
+/* In this example, I am making anything with the class="text-center" align text to the center. But it is also important to note that I also specifically define paragraphs with the class of text-center to align text to the center. This is an example of how I can pick and choose specifically what elements receive what styling.*/
+		p.text-center , .text-center{
+			text-align: center;
+		}
+
+		#box1{
+			text-align: center;
+			background: black;
+			color: white;
+			width: 200px;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			border-width: 3px;
+			border-color: violet;
+			border-style: solid;
+			float: left;
+		}
+
+		#box2{
+			text-align: right;
+			background: blue;
+			color: white;
+			width: 200px;
+			padding: 30px;
+			margin: 30px;
+			border: 3px cyan dashed;
+			float:right;
+		}
+
+		.clr{
+			clear:both;
+		}
+
+		ul.my-list{
+			list-style: none;
+			padding: 0;
+			line-height: 2.2em;
+		}
+
+		ul.my-list li{
+			border-bottom: 1px dotted #666;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="text-center">
+	<h1>Welcome</h1>
+	<p class="text-center">This is a paragraph</p>
+	<p>This is a different paragraph</p>
+</div>
+
+	<div id="box1">
+		<p>This is some text<p>
+	</div>
+
+	<div id="box2">
+		<p class="text-center">Here is some more text</p>
+	</div>
+	<div class="clr"></div>
+	<div>Hello World</div>
+
+	<ul class="my-list">
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+		<li>List Item</li>
+	</ul>
+
+</body>
+</html>
