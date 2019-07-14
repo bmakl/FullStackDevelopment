@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocation</title>
+</head>
+<body>
+
+	<button onclick="getLocation()">Get Coordinates</button>
+	<h1 id="Coordinates"></h1>
+
+	<script>
+		var h1Heading = document.getElementById('Coordinates');
+		function getLocation()
+		{
+			if(navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}
+			else
+			{
+				h1Heading.innerHTML = "Geolocation is not supported";
+			}
+
+			function showPosition(position)
+			{
+				//console.log(position.coords.latitude);
+				h1Heading.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+			}
+		}
+
+		//.coords allows us to access the latitude and longitude of the user. This script works in the browser (chrome) without being hosted on a server.
+
+	</script>
+
+
+</body>
+</html>
