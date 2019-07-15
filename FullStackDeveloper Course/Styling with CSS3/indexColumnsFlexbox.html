@@ -2,8 +2,109 @@
 <html>
 <head>
 	<title>Columns</title>
+	<style>
+		article{
+			/*Very nicely and concisely makes text separated into x number of columns*/
+			column-count: 3;
+
+			/*Allows to manually set the distance between these columns*/
+			column-gap: 40px;
+
+			/*Sets up these 'borders' between our columns for better organization*/
+			/*column-rule-style: solid;*/
+
+			/*Changes the 'border' width */
+			/*column-rule-width: 1px;*/
+
+			/*Changes the color of the border linse*/
+			/*column-rule-color: coral;*/
+
+			/*We can also consolidate these three commands into a single line*/
+			column-rule: 1px solid blue;
+
+		}
+
+		article h1{
+
+			/*if we have a h1 tag or any sort of element in the same tag as our element that is being made into columns we can use the column-span to make the formatting look a little nicer*/
+			column-span: all;
+		}
+
+		.textbox1{
+			border: 2px solid;
+			padding: 20px;
+			width: 300px;
+			overflow: auto;
+
+			/*allows the user to manually resize the element. 'horizontal' only allows resizing on the x axis
+			'vertical' only allows resizing on the y axis
+			'both' lets us resize anyway we want*/
+			resize: horizontal;
+		}
+
+		.textbox2{
+			margin: 20px;
+			padding:10px;
+			width: 300px;
+			height: 100px;
+			border: 1px solid black;
+
+			/*Places a red outline around what we have already created*/
+			outline: 1px dashed red;
+
+			/*This element moves our outline by the number we provide and makes it look like (in this case) that our red outline has some space around our black box*/
+			outline-offset: 10px;
+		}
+
+		.flex-container{
+			/*the display property here changes the appearance of our flex-item elements. Without our display:flex; call - our items would each be listed on new line and would not fit inside our box. This call neatly fits them inside the box. Changing the widths and dimensions of our container also automatically resize our flex-items.*/
+			display: flex;
+
+			/*In our first display flex call it fits our flex-items neatly in the box and aligns them in order from left to right.
+			If we do not wish for that to happen, we can use this flex-direction call to reverse the rows appearance*/
+			/*flex-direction: row-reverse;*/
+			
+			/*Want them to be nicely fit together in a column rather than in a row? Just use the same command but column as the value. Reversing this one flips our flex-items on top of each other.*/
+			flex-direction: row;
+
+			/*Trying to fit your content in a specific way? justify content has option that control where our flex-items will end up. 'center' puts them equally centered. space-between leaves a little extra space between each item. and space-around obviously gives a little extra space around these items*/
+			justify-content: space-between;
+			width: 400px;
+			height: 250px;
+			background-color: black;
+		}
+
+		.flex-item{
+			background-color: lightblue;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+
+		/*Interesting but important concept here for HTML and CSS
+		  notice that there is no class explicitly called 'first' but rather it appears at the end of another class. It is acceptable to use a word from that class and create a css style from it like so.*/
+		.first{
+			/*This allows us to manually set the order of how elements should appear. In this case, we want this element to appear first in our container so the smaller the value the earlier it appears. A order:0 refers to normal placement.*/
+			order: -1;
+		}
+	</style>
 </head>
 <body>
+	<article>
+		<h1>Article Title</h1>
+		Lorem ipsum dolor sit asmet, consectetur adipiscing elit. Duis sollicitudin rutrum enim, eget gravida eros pretium eget. Aliquam porttitor magna quis malesuada sagittis. Phasellus facilisis lacus risus, non condimentum leo viverra cursus. Proin porta ante quis mi dapibus, rhoncus ullamcorper sem condimentum. Pellentesque interdum odio magna, dignissim sagittis ipsum vestibulum eget. Suspendisse erat ex, imperdiet vel auctor vitae, feugiat nec ipsum. Suspendisse finibus id ex at malesuada. Mauris ultricies nunc ut tellus aliquam vestibulum. Fusce efficitur lorem ut velit luctus, et auctor tellus volutpat.
+	</article>
 
+	<br>
+
+	<div class="textbox1" contenteditable="true">Try and resize this element</div>
+
+	<div class="textbox2">This element has a 10 pixel outline</div>
+
+	<div class="flex-container">
+		<div class="flex-item">flex item 1</div>
+		<div class="flex-item first">flex item 2</div>
+		<div class="flex-item">flex item 3</div>
+	</div>
 </body>
 </html>
