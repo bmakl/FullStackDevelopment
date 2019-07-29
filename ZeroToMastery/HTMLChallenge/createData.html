@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DataPad-Create Data</title>
+  </head>
+  <body>
+    <header>
+      <h1>Create Data</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Become a User</a>
+    </nav>
+
+    <div class="CreateData_About">
+      <h3>Create Some Data!</h3>
+      <caption>This is your space to write about world events, personal life events, or anything you feel like recording. </caption>
+    </div>
+
+    <br><br>
+
+    <div class="DataPost">
+      <form method="post" id="postForm">
+        Title: <input type="text" name="Title" placeholder="July 29-Frisbee Idea" required>
+        <select name="PublicPrivate">
+          <option value="Private">Private</option>
+          <option value="Public">Public</option>
+        </select><br><br>
+      </form>
+      <textarea rows="8" cols="80" form="postForm" placeholder="Enter Data Here..." required></textarea>
+
+      <br><br>
+
+      <input type="submit" value="Create Data" form="postForm">
+
+    </div>
+  </body>
+</html>

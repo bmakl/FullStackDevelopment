@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+  </head>
+  <body>
+    <!-- <header>
+      <h1>Register</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a><br>
+      <a href="NewPageToAnchor.html">New Page</a>
+    </nav> -->
+    <div>  <!--This is a block element that allows us to group content together it might be more accurate to call both these tags containers-->
+
+
+      <form method="GET">
+        First Name: <input type="text" name="firstname"> <br>
+        Last Name: <input type="text" name="lastname">  <br>
+        Email: <input type="email" name="email" required>  <br>
+        Password: <input type="password" name="password" min="5">  <br>
+        Birthday: <input type="date" name="birthday"><br>
+        <br><br>
+        Gender: <br>
+                <input type="radio" name="gender" value="male">Male <br>
+                <input type="radio" name="gender" value="female">Female <br>
+                <input type="radio" name="gender" value="other">Other <br>
+                <br>
+        Pets: <br>
+        <input type="checkbox" name="cat"> Cat <br>
+        <input type="checkbox" name="dog"> Dogs <br>
+        <br>
+        <br>
+        Cars: <br>
+        <select name="cars">
+          <option value="Volvo">Volvo</option>
+          <option value="Audi">Audi</option>
+          <option value="Chevy">Chevy</option>
+          <option value="Other">Other</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Register">
+        <input type="reset">
+
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- This is called a query string
+it is a way for us to send our information to the backend or the servers
+We have to store this info somewhere so the website remembers us
+?
+firstname=new
+&lastname=fake
+&email=fakeman%40gmail.com
+&password=password%21
+&birthday=1992-01-27
+&gender=female
+&cat=on
+&cars=Other
+
+-->

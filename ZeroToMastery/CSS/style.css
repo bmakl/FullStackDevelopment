@@ -1,0 +1,32 @@
+/* Selector{
+  property:value;
+} */
+
+/*CSS = Cascading Style Sheet
+  -This means that it always takes the last input we define for selectors
+*/
+
+body{
+  background-image: url(BackgroundSeattleNight.jpg);
+  background-size: cover;
+}
+
+h2{
+  color: #00CF71;
+  text-align: center;
+  border: 5px solid rgba(0, 158, 86,0.4);
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+}
+
+p{
+  color: pink;
+}
+
+p{
+  color: green;
+}
